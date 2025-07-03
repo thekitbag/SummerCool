@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cool frost glass effect */
+.frost-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Ice crystal animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+.ice-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Cool blue glow effect */
+.cool-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Cooling wave animation */
+@keyframes cooling-wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.cooling-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.cooling-wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+  animation: cooling-wave 2s infinite;
+}
+
+/* Ice gradient backgrounds */
+.ice-gradient {
+  background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 25%, #81d4fa 50%, #4fc3f7 75%, #29b6f6 100%);
+}
+
+.arctic-gradient {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #bae6fd 50%, #7dd3fc 75%, #38bdf8 100%);
+}
+
+/* Shimmer effect for cooling elements */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Frost border effect */
+.frost-border {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #60a5fa, #3b82f6, #1d4ed8) border-box;
+}
+
+/* Cool hover effects */
+.cool-hover {
+  transition: all 0.3s ease;
+}
+
+.cool-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Ice crystal decorative elements */
+.ice-crystal {
+  position: relative;
+}
+
+.ice-crystal::before {
+  content: '❄';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.5rem;
+  color: #3b82f6;
+  opacity: 0.7;
+  animation: float 4s ease-in-out infinite;
+}
