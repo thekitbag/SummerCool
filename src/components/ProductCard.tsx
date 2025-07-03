@@ -59,7 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ unit }) => {
           
           <Link
             to={`/product/${unit.id}`}
-            className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 cool-glow shimmer"
+            className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 cool-glow shimmer"
           >
             <Snowflake className="h-4 w-4" />
             <span>Freeze Your Space</span>
