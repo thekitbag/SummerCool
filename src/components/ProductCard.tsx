@@ -19,6 +19,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ unit }) => {
         <div className="absolute top-4 right-4 frost-glass text-blue-800 px-3 py-1 rounded-full text-sm font-semibold cool-glow">
           ❄️ {unit.btu.toLocaleString()} BTU
         </div>
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold cool-glow">
+          SALE!
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
@@ -47,8 +50,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ unit }) => {
         <div className="border-t border-blue-100 pt-4">
           <div className="flex justify-between items-center mb-4">
             <div>
+              <div className="text-lg text-gray-500 line-through">
+                Original: £{(unit.dailyRate * 1.5).toFixed(2)}
+                <span className="text-sm font-normal text-gray-500">/day</span>
+              </div>
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                £{unit.dailyRate}
+                Sale: £{unit.dailyRate.toFixed(2)}
                 <span className="text-sm font-normal text-gray-600">/day</span>
               </div>
               <div className="text-sm text-gray-600">
