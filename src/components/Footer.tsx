@@ -1,5 +1,6 @@
 import React from 'react';
-import { Snowflake, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Snowflake, Mail, MapPin, Map } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -37,6 +38,12 @@ const Footer: React.FC = () => {
               <li>🚚 Next Day Ice Delivery</li>
               <li>❄️ Free Frost Collection</li>
               <li>🌡️ Heatwave Emergency Response</li>
+              <li>
+                <Link to="/service-areas" className="flex items-center hover:text-white transition-colors">
+                  <Map className="h-4 w-4 mr-2" />
+                  <span>Our Service Areas</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -59,7 +66,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2 frost-glass px-3 py-2 rounded-lg">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span>Free Delivery in Southampton Area</span>
+                <span>Free Delivery Along The South Coast</span>
               </div>
             </div>
           </div>

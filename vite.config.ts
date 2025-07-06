@@ -1,10 +1,17 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import sitemap from 'vite-plugin-sitemap'
+const locations = require('./src/data/locations.json') 
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    sitemap({
+      hostname: 'https://www.summercool.co.uk',
+      dynamicRoutes: locations.map((location) => `/${location.id}`),
+    })
+  ],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+})

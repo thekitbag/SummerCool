@@ -1,7 +1,11 @@
 import React from 'react';
 import { Truck, Clock, Calendar, Thermometer, Snowflake } from 'lucide-react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  location?: string; 
+}
+
+const Hero: React.FC<HeroProps> = ({ location = 'Southampton' }) => { 
   return (
     <div className="arctic-gradient py-16 relative overflow-hidden">
       {/* Floating ice crystals */}
@@ -23,7 +27,7 @@ const Hero: React.FC = () => {
           
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 bg-clip-text text-transparent">
-            Air Conditioning Hire with Next Day Delivery in Southampton
+            Air Conditioning Hire with Next Day Delivery in {location}
             </span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">

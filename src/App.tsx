@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import Checkout from './pages/Checkout';
+import ServiceAreas from './pages/ServiceAreas';
 import OutOfStock from './pages/OutOfStock';
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <Header />
         <main className="flex-1">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/:locationId?" element={<Home />} />
+            <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/out-of-stock" element={<OutOfStock />} />
