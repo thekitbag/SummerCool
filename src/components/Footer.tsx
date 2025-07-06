@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2 frost-glass px-3 py-2 rounded-lg">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span>Nationwide Arctic Delivery</span>
+                <span>Free Delivery in Southampton Area</span>
               </div>
             </div>
           </div>

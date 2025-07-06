@@ -23,9 +23,8 @@ const Hero: React.FC = () => {
           
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 bg-clip-text text-transparent">
-              Instant Arctic Relief
+            Air Conditioning Hire with Next Day Delivery in Southampton
             </span>
-            <span className="block text-gray-800">From Tomorrow's Heatwave</span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Transform your sweltering space into an arctic oasis. Professional-grade cooling 
